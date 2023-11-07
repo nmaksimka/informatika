@@ -6,21 +6,19 @@
 # Вариант 3 - "да"Ответ: false
 # Вариант 4 - "" Ответ: "Введена пустая строка!"
 
+import re
 tests = (
-    "А роза упала на лапу Азора!",
+    "А роза упала на лапу Аз111ора!",
     "а",
     "да",
     ""
 )
 for i in tests:
-    palindromes = i.strip().lower()
-    palindromes = palindromes.replace('!', '')
-    palindromes = palindromes.replace(' ', '')
-    if len(palindromes) == 0:
+    palindrom = re.sub(r'[^\w]|\s|[0-9]', '', i.strip().lower())
+    if len(palindrom) == 0:
         print('"Введена пустая строка!"')
-    elif len(palindromes) == 1:
+        continue
+    if len(palindrom) == 1:
         print('false')
-    elif palindromes == palindromes[::-1]:
-        print('true')
-    else:
-        print('false')
+        continue
+    print(palindrom == palindrom[::-1])
