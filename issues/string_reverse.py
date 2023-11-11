@@ -15,12 +15,7 @@ for k in string:
     l.append(k)
 l.reverse()
 print(*l, sep = '')
-#неудачная, хочу спросить как написать олгически этот код так чтобы он работал
-#l.clear()
-#for _ in range(len(string)):
-#    l.append(string[-1])
-#    string.removeprefix(string[-1])
-#print(*l)
+
 #4
 n = len(string)
 s = ''
