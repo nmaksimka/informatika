@@ -71,10 +71,9 @@ def game_rules():
 
 # проверка правильности
 def is_valid_z(z):
-    if z.isdigit() is False:
+    if z.isdigit() is False or int(z) < 1:
         print('Ты ввел не число :(')
         print('Попробуй включить мозг и ввести число')
-    elif int(z) < 1:
         print('Больной?')
         start()
 
