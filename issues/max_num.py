@@ -1,5 +1,7 @@
-x = input().split(',')
-l = list()
-for i in x:
-    l.append(int(i))
-print('Ответ:', min(l))
+def maximum_number(l):
+    x = 0
+    for i in l:
+        for j in l:
+            if j > i:
+                x = j
+    return x
